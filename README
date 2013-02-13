@@ -1,0 +1,25 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4436
+
+
+PSearch offers a tiny preview for your searches.
+
+Execute the :PSearch command and type something. You'll see a preview
+of all the lines where the pattern you gave matches in the current file. The 
+pattern is the one you would normally use doing searches with '/' and '?'.
+
+To interact with the matches list use the following keys:
+
+  UP, CTRL+K : move up in the list.
+
+  DOWN, CTRL+J : move down in the list.
+
+  RETURN, CTRL+G : go to the selected match.
+
+  ESC, CTRL+C : close the matches list
+  
+------------------------------------------------------------------------------------------ 
+
+For information about other available commands and settings see 
+the full documentation. (:help psearch) 
+
+Get latest versions at: https://github.com/gcmt/psearch.vim 

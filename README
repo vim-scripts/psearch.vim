@@ -1,25 +1,44 @@
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=4436
 
 
-PSearch offers a tiny preview for your searches.
+screenshot: https://raw.github.com/gcmt/psearch.vim/master/extra/screenshot.png
 
-Execute the :PSearch command and type something. You'll see a preview
-of all the lines where the pattern you gave matches in the current file. The 
-pattern is the one you would normally use doing searches with '/' and '?'.
+Execute the :PSearch command and type something. You'll see a preview 
+of all the lines where the pattern you gave matches in the currently open buffers. 
+The pattern is the one you would normally use doing searches with '/' and '?' and 
+with the "nomagic" option set. 
 
-To interact with the matches list use the following keys:
+To interact with the matches list use the following keys: 
 
-  UP, CTRL+K : move up in the list.
+  UP, CTRL+K : move up in the list. 
 
-  DOWN, CTRL+J : move down in the list.
+  DOWN, CTRL+J : move down in the list. 
 
-  RETURN, CTRL+G : go to the selected match.
+  LEFT, CTRL+H : view the matches list of the previous buffer. 
 
-  ESC, CTRL+C : close the matches list
-  
+  RIGHT, CTRL+L : view the matches list of the next buffer. 
+
+  RETURN, CTRL+G : go to the selected match. 
+
+  CTRL+A : show jump marks for each result.
+
+  CTRL+T : move the cursor to the first match in the matches list. 
+
+  CTRL+B : move the cursor to the last match in the matches list. 
+
+  ESC, CTRL+C : close the matches list. 
+
+
+Pressing CTRL+A in the psearch navigation buffer will add jump marks denoted
+in the format <[a-z]> for each search result entry. When the marks have been
+displayed entering any of the letters used as mark will jump directly to the
+respective entry and close the search navigation. Entering anything that is
+not a mark will discard the action.
+
+   
 ------------------------------------------------------------------------------------------ 
 
 For information about other available commands and settings see 
 the full documentation. (:help psearch) 
 
-Get latest versions at: https://github.com/gcmt/psearch.vim 
+Get the latest version at: https://github.com/gcmt/psearch.vim

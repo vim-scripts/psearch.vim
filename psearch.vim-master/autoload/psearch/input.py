@@ -25,9 +25,9 @@ class Input:
 
     def get(self):
         """To read the key pressed by the user."""
-         # FIX: not so cool, but the usual try/except python statement
-         # seems not catching the KeyboardInterrupt exception. This is the
-         # only way to get the laucher closed with ctrl+c.
+        # FIX: not so cool, but the usual try/except python statement
+        # seems not catching the KeyboardInterrupt exception. This is the
+        # only way to get the laucher closed with ctrl+c.
         vim.command("""
             try |
              let g:pse_launcher_char = getchar() |

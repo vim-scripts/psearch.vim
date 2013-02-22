@@ -1,28 +1,32 @@
 ## PSearch.vim
 
-**v0.1.0***
+**v0.2**
 
 
 ### Overview
 
 This plugin shows a preview of all the lines where your search
-pattern matches in the current file. 
+pattern matches in the currently opened buffers. 
 
 ![Screenshot](/extra/screenshot.png "A view of the plugin at work")  
 
-To open the preview window use the `PSearch` command. As you start typing into
-the special command line you'll see the preview window updating automatically.
-
-Note that you are allowed to use any pattern that would work with the `/` and
-`?` vim commands.
+Execute the `:PSearch` command and type something. You'll see a preview 
+of all the lines where the pattern you gave matches in the currently 
+opened buffers.
 
 Below there is list of all the mappings you can use to interact with the window:
 
 * `UP`, `CTRL+K`: move up in the list.
 * `DOWN`, `CTRL+J`: move down in the list.
+* `CTRL+B`: move to the bottom of the list.
+* `CTRL+T`: move to the top of the list.
+* `LEFT`, `RIGHT`: move across previews of matches in other buffers.
 * `RETURN`, `CTRL+G`: go to the selected match.
-* `ESC`, `CTRL+C`: close the list.
-                              
+* `ESC`, `CTRL+C`: close the matches list.
+
+You are allowed to use any pattern that would work with the `/` and
+`?` vim commands. Note that you have to write the pattern as the `nomagic`
+option would be set.
 
 
 ## Requirements
@@ -34,7 +38,7 @@ Below there is list of all the mappings you can use to interact with the window:
 ## Installation
 
 Extract the content of the folder into the `$HOME/.vim` directory or use your favourite
-package manager.
+plugin manager.
 
 
 
@@ -71,6 +75,11 @@ default: ' ❯ '
 
 ## Changelog
 
-### v0.1.0
+### v0.2
 
-* first release
+* Searches are now performed in all buffers. 
+* Fix issues with some input characters.
+
+### v0.1
+
+* First release

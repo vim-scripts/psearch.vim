@@ -1,11 +1,11 @@
 " ============================================================================
 " File: plugin/psearch.vim
-" Description: A preview for your searches
+" Description: Multibuffer search 
 " Mantainer: Giacomo Comitti (https://github.com/gcmt)
 " Url: https://github.com/gcmt/psearch.vim
 " License: MIT
-" Version: 0.1.0
-" Last Changed: 12 Feb 2013
+" Version: 0.2.0
+" Last Changed: 14 Feb 2013
 " ============================================================================
 "
 
@@ -50,6 +50,7 @@ let g:pse_loaded = 1
 " Settings
 let g:pse_prompt = get(g:, 'pse_prompt', ' ❯ ')
 let g:pse_max_height = get(g:, 'pse_max_height', 15)
+
 
 " Commands
 command! PSearch call psearch#Open('')

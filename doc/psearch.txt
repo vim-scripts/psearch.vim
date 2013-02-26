@@ -1,44 +1,47 @@
 *psearch.txt* *psearch*
 
-                                PSearch v0.2 
-                                     ~ 
-                              Reference Manual
+                              PSearch v0.3
+                                    ~
+                            Reference Manual
 
 
 ==============================================================================
 CONTENTS                                                    *psearch-contents*
 
-           1. Overview .............................. |psearch-overview|
-           2. Commands .............................. |psearch-commands|
-           3. Settings .............................. |psearch-settings|
-           4. About ................................. |psearch-about|
+        1. Overview .............................. |psearch-overview|
+        2. Commands .............................. |psearch-commands|
+        3. Jump marks ............................ |psearch-jumpmarks|
+        4. Settings .............................. |psearch-settings|
+        5. About ................................. |psearch-about|
 
 
 ==============================================================================
 1. Overview                                                 *psearch-overview*
 
 This plugin shows a preview of all the lines where your search pattern matches
-in the current file. 
+in the current file.
 
-Execute the `:PSearch` command and type something. You'll see a preview 
-of all the lines where the pattern you gave matches in the currently 
+Execute the `:PSearch` command and type something. You'll see a preview
+of all the lines where the pattern you gave matches in the currently
 opened buffers.
 
 Below there is list of all the mappings you can use to interact with the window:
 
-    * UP, CTRL+K: move up in the list.
+* UP, CTRL+K: move up in the list.
 
-    * DOWN, CTRL+J: move down in the list.
+* DOWN, CTRL+J: move down in the list.
 
-    * CTRL+B: move to the bottom of the list.
+* CTRL+B: move to the bottom of the list.
 
-    * CTRL+T: move to the top of the list.
+* CTRL+T: move to the top of the list.
 
-    * LEFT, RIGHT: move across previews of matches in other buffers.
+* LEFT or CTRL+H, RIGHT or CTRL+L: move across lists of matches of other buffers.
 
-    * RETURN, CTRL+G: go to the selected match.
+* CTRL+A: show jump marks for each result.
 
-    * ESC, CTRL+C: close the matches list.
+* RETURN, CTRL+G: go to the selected match.
+
+* ESC, CTRL+C: close the matches list.
 
 You are allowed to use any pattern that would work with the `/` and
 `?` vim commands. Note that you have to write the pattern as the `nomagic`
@@ -63,19 +66,29 @@ As the `PSearch` command but uses the word under cursor for the search.
 
 
 ==============================================================================
-3. Settings                                                 *psearch-settings*
+3. Jump marks                                             *psearch-jump-marks*
+
+Pressing CTRL+A in the psearch navigation buffer will add jump marks denoted
+in the format <[a-z]> for each search result entry. When the marks have been
+displayed entering any of the letters used as mark will jump directly to the
+respective entry and close the search navigation. Entering any letter that is
+not a mark will discard the action.
+
+
+==============================================================================
+4. Settings                                                 *psearch-settings*
 
 ------------------------------------------------------------------------------
-g:pse_max_height                                            *g:pse_max_height* 
+g:pse_max_height                                            *g:pse_max_height*
 
-With this setting you can set the maximum height for the window opened with 
+With this setting you can set the maximum height for the window opened with
 the `PSearch` command.
 
 default: 15
 
 
 ------------------------------------------------------------------------------
-g:pse_prompt                                                    *g:pse_prompt* 
+g:pse_prompt                                                    *g:pse_prompt*
 
 With this setting you can customize the look of the prompt used by the
 `PSearch` command.
@@ -85,7 +98,7 @@ default: ' ❯ '
 
 
 ==============================================================================
-4. About                                                        *psearch-about*
+5. About                                                        *psearch-about*
 
 Author: Giacomo Comitti
 License: MIT
